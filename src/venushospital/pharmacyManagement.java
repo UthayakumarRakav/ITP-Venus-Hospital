@@ -578,7 +578,12 @@ public class pharmacyManagement extends javax.swing.JFrame {
             insert.setString(3, drugcolour);
             insert.setString(4, quantity);
             insert.setString(5, price);
+             if(price.isEmpty() || drugid.isEmpty() || drugname.isEmpty() || drugcolour.isEmpty() || quantity.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
             insert.executeUpdate();
+           
             JOptionPane.showMessageDialog(this,"Record Added");
             table_update();
             
@@ -644,6 +649,10 @@ public class pharmacyManagement extends javax.swing.JFrame {
             update.setString(3, quantity);
             update.setString(4, price);
             update.setString(5, drugid);
+            if(price.isEmpty() || drugid.isEmpty() || drugname.isEmpty() || drugcolour.isEmpty() || quantity.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
             update.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record updated");
             table_update();
@@ -728,7 +737,10 @@ public class pharmacyManagement extends javax.swing.JFrame {
              String Supplier_Name = Sname.getText();
             insert.setString(1, Supplier_ID );
             insert.setString(2, Supplier_Name);
-            
+            if(Supplier_ID.isEmpty() || Supplier_Name.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
             insert.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record Added");
             table2_update();
@@ -769,9 +781,14 @@ public class pharmacyManagement extends javax.swing.JFrame {
              
             
             update.setString(1, Supplier_ID);
-            update.setString(2, Supplier_Name);         
+            update.setString(2, Supplier_Name);       
+            if(Supplier_ID.isEmpty() || Supplier_Name.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
             update.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record updated");
+            
             table2_update();
             
             Sid.setText("");
