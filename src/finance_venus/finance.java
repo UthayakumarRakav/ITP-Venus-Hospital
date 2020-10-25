@@ -529,7 +529,11 @@ public class finance extends javax.swing.JFrame {
             insert.setString(2, CurrentAssets);
             insert.setString(3, TotalCash);
             insert.setString(4, AccountBalance);
-          
+                  if(TotalAssets.isEmpty() || CurrentAssets.isEmpty() ||  TotalCash.isEmpty() || AccountBalance.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                  else{
             insert.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record Added");
             table_update();
@@ -541,7 +545,7 @@ public class finance extends javax.swing.JFrame {
             
             Ta.requestFocus();
             
- 
+                  }
             
             
              
@@ -592,7 +596,11 @@ public class finance extends javax.swing.JFrame {
             insert.setString(2, PatientName);
             insert.setString(3, ConsultantFee);
             insert.setString(4,  MedicinePrice);
-          
+                 if(PatientID.isEmpty() || PatientName.isEmpty() ||  ConsultantFee.isEmpty() || MedicinePrice.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                 else{
             insert.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record Added");
             table2_update();
@@ -604,7 +612,7 @@ public class finance extends javax.swing.JFrame {
             
             Pid.requestFocus();
             
- 
+                 }
             
             
              
@@ -652,6 +660,11 @@ public class finance extends javax.swing.JFrame {
             update.setString(2, TotalCash);
             update.setString(3, AccountBalance);
             update.setString(4, TotalAssets);
+                   if(TotalAssets.isEmpty() || CurrentAssets.isEmpty() ||  TotalCash.isEmpty() || AccountBalance.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                   else{
             update.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record updated");
             table_update();
@@ -664,7 +677,7 @@ public class finance extends javax.swing.JFrame {
             Ta.requestFocus();
             
  
-            
+                   }
             
              
         } catch (ClassNotFoundException ex) {
@@ -698,6 +711,11 @@ public class finance extends javax.swing.JFrame {
             update.setString(2, ConsultantFee);
             update.setString(3,  MedicinePrice);
             update.setString(4, PatientID);
+                 if(PatientID.isEmpty() || PatientName.isEmpty() ||  ConsultantFee.isEmpty() || MedicinePrice.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                 else{
             update.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record updated");
             table2_update();
@@ -709,7 +727,7 @@ public class finance extends javax.swing.JFrame {
             
            Pid.requestFocus();
             
- 
+                 }
             
             
              

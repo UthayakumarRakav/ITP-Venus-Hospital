@@ -463,6 +463,11 @@ public class NewJFrame extends javax.swing.JFrame {
             insert.setString(5, typeofscan);
              insert.setString(6, scanofdate);
             insert.setString(7, refernameofphysician);
+                 if(patientid.isEmpty() || patientage.isEmpty() ||  patientname.isEmpty() || gender.isEmpty()|| typeofscan.isEmpty()|| scanofdate.isEmpty()|| refernameofphysician.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                 else{
             insert.executeUpdate();
             
             
@@ -481,7 +486,7 @@ public class NewJFrame extends javax.swing.JFrame {
             
             
             
-            
+                 } 
             
             
             
@@ -572,6 +577,11 @@ public class NewJFrame extends javax.swing.JFrame {
             insert.setString(5, scanofdate);
             insert.setString(6, refernameofphysician);
             insert.setString(7, patientid);
+                  if(patientid.isEmpty() || patientage.isEmpty() ||  patientname.isEmpty() || gender.isEmpty()|| typeofscan.isEmpty()|| scanofdate.isEmpty()|| refernameofphysician.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                  else{
             insert.executeUpdate();
             
             JOptionPane.showMessageDialog(this,"Record update");
@@ -588,7 +598,7 @@ public class NewJFrame extends javax.swing.JFrame {
             
             
             
-            
+                  }
             
             
             

@@ -472,6 +472,11 @@ public class patient extends javax.swing.JFrame {
             insert.setString(7,wardNo);
             insert.setString(8,bedNo);
             
+                  if(patientID.isEmpty() || patientName.isEmpty() ||  diseaseName.isEmpty() || consultantName.isEmpty()|| patientSection.isEmpty()|| blockNo.isEmpty()|| wardNo.isEmpty()|| bedNo.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                  else{
             insert.executeUpdate();
             
             JOptionPane.showMessageDialog(this, "Record Added");
@@ -488,7 +493,7 @@ public class patient extends javax.swing.JFrame {
         
             jTextField1.requestFocus();
         
-            
+                  }
             
             
         } catch (ClassNotFoundException ex) {
@@ -538,8 +543,11 @@ public class patient extends javax.swing.JFrame {
             insert.setString(8,patientID);
             
             
-            
-            
+                   if(patientID.isEmpty() || patientName.isEmpty() ||  diseaseName.isEmpty() || consultantName.isEmpty()|| patientSection.isEmpty()|| blockNo.isEmpty()|| wardNo.isEmpty()|| bedNo.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                   else{
             insert.executeUpdate();
             
             JOptionPane.showMessageDialog(this, "Record updated");
@@ -556,7 +564,7 @@ public class patient extends javax.swing.JFrame {
         
         jTextField1.requestFocus();
         
-            
+                   }   
             
             
         } catch (ClassNotFoundException ex) {

@@ -381,6 +381,11 @@ public class Registration extends javax.swing.JFrame {
               insert.setString(4,dob);
                insert.setString(5,blood);
                insert.setString(6, gender);
+               if(no.isEmpty() || name.isEmpty() || number.isEmpty() || dob.isEmpty() || blood.isEmpty() || gender.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+               else{
                insert.executeUpdate();
                
                JOptionPane.showMessageDialog(this,"Record Addeddd");
@@ -392,7 +397,7 @@ public class Registration extends javax.swing.JFrame {
                txtblood.setText("");
               txtgender.setText("");
               txtno.requestFocus();
-               
+               }    
             
             
         } 
@@ -470,6 +475,11 @@ public class Registration extends javax.swing.JFrame {
                insert.setString(4,blood);
                insert.setString(5, gender);
                insert.setInt(6, no);
+                  if( name.isEmpty() || number.isEmpty() || dob.isEmpty() || blood.isEmpty() || gender.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                  else{
                insert.executeUpdate();
                
                JOptionPane.showMessageDialog(this,"Record Update");
@@ -481,7 +491,7 @@ public class Registration extends javax.swing.JFrame {
                txtblood.setText("");
               txtgender.setText("");
               txtno.requestFocus();
-               
+                  }
             
             
         } 

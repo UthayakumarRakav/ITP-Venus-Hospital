@@ -574,6 +574,11 @@ public class AmbulanceManagement extends javax.swing.JFrame {
             insert.setString(3, License);
             insert.setString(4, Insurance);
             insert.setString(5, Gender);
+            if(Driverid.isEmpty() || Drivername.isEmpty() || License.isEmpty() || Insurance.isEmpty() || Gender.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+          else  {
             insert.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record Added");
             table_update();
@@ -585,7 +590,7 @@ public class AmbulanceManagement extends javax.swing.JFrame {
             Ge.setText("");
             Did.requestFocus();
             
- 
+            }
             
             
              
@@ -613,7 +618,11 @@ public class AmbulanceManagement extends javax.swing.JFrame {
             insert.setString(1, Vehicleid);
             insert.setString(2, Date);
             insert.setString(3, Amount);
-           
+           if(Vehicleid.isEmpty() || Date.isEmpty() || Amount.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+           else{
             insert.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record Added");
             table2_update();
@@ -625,7 +634,7 @@ public class AmbulanceManagement extends javax.swing.JFrame {
             Vid.requestFocus();
             
  
-            
+           } 
             
              
         } catch (ClassNotFoundException ex) {
@@ -686,6 +695,11 @@ public class AmbulanceManagement extends javax.swing.JFrame {
             update1.setString(3, Insurance);
             update1.setString(4, Gender);
             update1.setString(5, Driverid);
+            if(Driverid.isEmpty() || Drivername.isEmpty() || License.isEmpty() || Insurance.isEmpty() || Gender.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+            else{
             update1.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record updated");
             table_update();
@@ -697,7 +711,7 @@ public class AmbulanceManagement extends javax.swing.JFrame {
             Ge.setText("");
             Did.requestFocus();
             
- 
+            }
             
             
              
@@ -725,12 +739,15 @@ public class AmbulanceManagement extends javax.swing.JFrame {
             String Vehicleid = Vid.getText();         
              String Date = Dom.getText();              
              String Amount = Aom.getText();
-            
-            
-           
+            if(Vehicleid.isEmpty() || Date.isEmpty() || Amount.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+            else{
             update1.setString(1, Date);
             update1.setString(2, Amount);
              update1.setString(3, Vehicleid);
+             
             update1.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record updated");
             table2_update();
@@ -740,7 +757,7 @@ public class AmbulanceManagement extends javax.swing.JFrame {
             Aom.setText("");         
             Vid.requestFocus();
             
- 
+            }
             
             
              

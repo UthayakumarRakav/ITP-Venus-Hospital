@@ -414,6 +414,11 @@ public class doctordeatil extends javax.swing.JFrame {
             insert.setString(3, date);
             insert.setString(4, offerotp);
             insert.setString(5, gender);
+                  if(doctorid.isEmpty() || doctorname.isEmpty() ||  date.isEmpty() || offerotp.isEmpty() ||gender.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                  else{
             insert.executeUpdate();
             
             JOptionPane.showMessageDialog(this,"Record Addeddd");
@@ -428,7 +433,7 @@ public class doctordeatil extends javax.swing.JFrame {
             txtgender.setText("");
             txtid.requestFocus();
             
-            
+                  } 
             
          
             
@@ -512,6 +517,11 @@ public class doctordeatil extends javax.swing.JFrame {
             insert.setString(3, offerotp);
             insert.setString(4, gender);
              insert.setString(5, doctorid);
+                   if(doctorid.isEmpty() || doctorname.isEmpty() ||  date.isEmpty() || offerotp.isEmpty() ||gender.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                   else{
             insert.executeUpdate();
             
             JOptionPane.showMessageDialog(this,"Record update");
@@ -527,7 +537,7 @@ public class doctordeatil extends javax.swing.JFrame {
             txtid.requestFocus();
             
             
-            
+                   }  
          
             
         } 

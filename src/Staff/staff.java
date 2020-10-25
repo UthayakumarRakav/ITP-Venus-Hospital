@@ -702,6 +702,11 @@ public class staff extends javax.swing.JFrame {
             insert.setString(8, shifttime);
              insert.setString(9,jobname);
              insert.setString(3, staffid);
+                if(fname.isEmpty() || department.isEmpty() || divison.isEmpty() || emloyementstatus.isEmpty() || workblockname.isEmpty() || shifttime.isEmpty() || jobname.isEmpty()|| staffid.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                else{
             insert.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record Added");
             table_update();
@@ -718,7 +723,7 @@ public class staff extends javax.swing.JFrame {
             Fn.requestFocus();
             
  
-            
+                }
             
              
         } catch (ClassNotFoundException ex) {
@@ -777,7 +782,12 @@ public class staff extends javax.swing.JFrame {
             insert.setString(4, Gender );  
             insert.setString(5,  Address );
             insert.setString(6, DateOfBirth);
-            insert.setString(7, EmailAddress);           
+            insert.setString(7, EmailAddress);  
+                if(FullName.isEmpty() || Age.isEmpty() ||  PhoneNumber.isEmpty() || Gender.isEmpty() ||Address.isEmpty() || DateOfBirth.isEmpty() || EmailAddress.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                else{
             insert.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record Added");
             table2_update();
@@ -793,7 +803,7 @@ public class staff extends javax.swing.JFrame {
             
  
             
-            
+                }      
              
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(staff.class.getName()).log(Level.SEVERE, null, ex);
@@ -860,6 +870,11 @@ public class staff extends javax.swing.JFrame {
             update.setString(7, shifttime);
              update.setString(8,jobname);
              update.setString(9, staffid);
+                 if(fname.isEmpty() || department.isEmpty() || divison.isEmpty() || emloyementstatus.isEmpty() || workblockname.isEmpty() || shifttime.isEmpty() || jobname.isEmpty()|| staffid.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                 else{
             update.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record Added");
             table_update();
@@ -877,7 +892,7 @@ public class staff extends javax.swing.JFrame {
             Fn.requestFocus();
             
  
-            
+                 }   
             
              
         } catch (ClassNotFoundException ex) {
@@ -977,7 +992,12 @@ public class staff extends javax.swing.JFrame {
             update.setString(4, Gender );  
             update.setString(5,  Address );
             update.setString(6, DateOfBirth);
-            update.setString(7, EmailAddress);           
+            update.setString(7, EmailAddress);   
+                  if(FullName.isEmpty() || Age.isEmpty() ||  PhoneNumber.isEmpty() || Gender.isEmpty() ||Address.isEmpty() || DateOfBirth.isEmpty() || EmailAddress.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this,"please fill all the details!!!");
+            }
+                  else{
             update.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record Updated");
             table2_update();
@@ -993,7 +1013,7 @@ public class staff extends javax.swing.JFrame {
             
  
             
- 
+                  }
             
             
              

@@ -582,6 +582,7 @@ public class pharmacyManagement extends javax.swing.JFrame {
             {
                 JOptionPane.showMessageDialog(this,"please fill all the details!!!");
             }
+             else{
             insert.executeUpdate();
            
             JOptionPane.showMessageDialog(this,"Record Added");
@@ -596,7 +597,7 @@ public class pharmacyManagement extends javax.swing.JFrame {
             
  
             
-            
+             }
              
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(pharmacyManagement.class.getName()).log(Level.SEVERE, null, ex);
@@ -653,6 +654,7 @@ public class pharmacyManagement extends javax.swing.JFrame {
             {
                 JOptionPane.showMessageDialog(this,"please fill all the details!!!");
             }
+            else{
             update.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record updated");
             table_update();
@@ -664,7 +666,7 @@ public class pharmacyManagement extends javax.swing.JFrame {
             Dprice.setText("");
             Did.requestFocus();
             
- 
+            }
             
             
              
@@ -723,25 +725,25 @@ public class pharmacyManagement extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:   String drugid = Did.getText();
-        DefaultTableModel Df = (DefaultTableModel)jTable2.getModel();
-        int selectedIndex = jTable2.getSelectedRow();
-       
-       
+        String Supplier_ID = Sid.getText();
+        String Supplier_Name = Sname.getText();
         
-        
+  
         try {
             Class.forName("com.mysql.jdbc.Driver");
          java.sql.Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/venus","root","");
             insert = con1.prepareStatement("insert into pharmacy_supplier(Supplier_ID,Supplier_Name)values(?,?)");
-             String Supplier_ID = Sid.getText();
-             String Supplier_Name = Sname.getText();
+            
             insert.setString(1, Supplier_ID );
             insert.setString(2, Supplier_Name);
             if(Supplier_ID.isEmpty() || Supplier_Name.isEmpty())
             {
                 JOptionPane.showMessageDialog(this,"please fill all the details!!!");
             }
+            
+            else{
             insert.executeUpdate();
+            
             JOptionPane.showMessageDialog(this,"Record Added");
             table2_update();
             
@@ -751,7 +753,7 @@ public class pharmacyManagement extends javax.swing.JFrame {
             
  
             
-            
+            }
              
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(pharmacyManagement.class.getName()).log(Level.SEVERE, null, ex);
@@ -786,6 +788,7 @@ public class pharmacyManagement extends javax.swing.JFrame {
             {
                 JOptionPane.showMessageDialog(this,"please fill all the details!!!");
             }
+            else{
             update.executeUpdate();
             JOptionPane.showMessageDialog(this,"Record updated");
             
@@ -795,7 +798,7 @@ public class pharmacyManagement extends javax.swing.JFrame {
             Sname.setText("");          
             Sid.requestFocus();
             
- 
+            }
             
             
              
